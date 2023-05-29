@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         transform.position += Pos;
         if (transform.position.y <= 4.3f && transform.position.y >= -4.36f && transform.position.x < 7.99f && transform.position.x > -8.01f)
         {
-            this.Rigid2d.AddForce(Pos * ) ;
+            //this.Rigid2d.AddForce(Pos * ) ;
         }
     }
 }
