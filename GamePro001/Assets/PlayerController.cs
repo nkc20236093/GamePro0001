@@ -8,6 +8,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerController : MonoBehaviour
 {
+    
     float yokoidou;
     float tateidou;
     float tateidousokudo;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         yokoidousokudo = 1;//Mathf.Abs(this.Rigid2d.velocity.x);
         tateidousokudo = 1; Mathf.Abs(this.Rigid2d.velocity.y);
         
