@@ -19,4 +19,11 @@ public class Enemy_Controller : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject) ;
+        }
+    }
 }

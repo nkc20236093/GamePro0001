@@ -8,21 +8,20 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    Animator anim;
     float yokoidou;
     float tateidou;
     float tateidousokudo;
     float yokoidousokudo;
     Vector3 Pos = Vector3.zero;
     Rigidbody2D Rigid2d;
-    Animator animator;
-    
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         Application.targetFrameRate = 60;
         this.Rigid2d = GetComponent<Rigidbody2D>();
-        this.animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -50,10 +49,20 @@ public class PlayerController : MonoBehaviour
 
         transform.position = p;
 
-        //Debug.Log(Pos);
-        //if (transform.position.y <= 4.3f && transform.position.y >= -4.36f && transform.position.x < 7.99f && transform.position.x > -8.01f)
-        //{
-        //    this.Rigid2d.AddForce(Pos);
-        //}
+        float y = Input.GetAxisRaw("Vertical");
+
+        if (y == 0)
+        {
+            anim.Play("Player_normal_Animation");
+        }
+        else if (y == 1)
+        {
+            anim.Play("Player_L_Animation");
+        }
+
+        else
+        {
+            anim.Play("Player_R_Animation");
+        }
     }
 }

@@ -2,21 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShotController : MonoBehaviour
+public class Shot_Controller : MonoBehaviour
 {
-    public GameObject Shot_pre;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x >= 8.14f)
+        transform.Translate(0, +0.1f, 0);
+
+        if (transform.position.x >= 9.56f)
         {
             Destroy(gameObject);
+        }
+
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+
         }
     }
 }
