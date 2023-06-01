@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Enemy_Controller : MonoBehaviour
 {
+    GameObject Heart_gauge_1;
+    GameObject Heart_gauge_2;
+    GameObject Heart_gauge_3;
+    GameObject Heart_gauge_4;
+    GameObject Heart_gauge_5;
     // Start is called before the first frame update
     void Start()
     {
