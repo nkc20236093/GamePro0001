@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hidarikabe
   - Enemy
+  - Shot
   layers:
   - Default
   - TransparentFX

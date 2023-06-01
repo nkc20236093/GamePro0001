@@ -13,17 +13,22 @@ public class Enemy_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(-0.1f, 0, 0);
-        if (transform.position.x <= -9.03f)
+        if (transform.position.x <= -8.01f)
         {
             Destroy(gameObject);
         }
+        transform.Translate(-0.1f,0,0);
     }
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("Shot"))
         {
-            Destroy(gameObject) ;
+            Destroy(gameObject);
+        }
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
         }
     }
 }

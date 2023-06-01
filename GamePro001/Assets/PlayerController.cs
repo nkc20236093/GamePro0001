@@ -28,8 +28,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-        yokoidousokudo = 1;//Mathf.Abs(this.Rigid2d.velocity.x);
-        tateidousokudo = 1; Mathf.Abs(this.Rigid2d.velocity.y);
+        yokoidousokudo = 0.25f;//Mathf.Abs(this.Rigid2d.velocity.x);
+        tateidousokudo = 0.25f; Mathf.Abs(this.Rigid2d.velocity.y);
         
 
         yokoidou = Input.GetAxisRaw("Horizontal");

@@ -25,7 +25,7 @@ public class Shot_Controller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-
+            Destroy(gameObject);
         }
     }
 }
