@@ -33,6 +33,8 @@ public class Enemy_Controller : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Player"))
         {
+            GameObject director = GameObject.Find("GameDirector");
+            director.GetComponent<GameDirector>().decreasehp();
             Destroy(gameObject);
         }
     }
